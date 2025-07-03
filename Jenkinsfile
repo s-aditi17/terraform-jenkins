@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git credentialsId: 'github-token', url: 'https://github.com/s-aditi17/terraform-infra.git'
+        git credentialsId: 'github-token', url: 'https://github.com/s-aditi17/terraform-jenkins'
       }
     }
 
