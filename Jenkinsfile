@@ -14,9 +14,17 @@ pipeline {
       }
     }
 
+    stage('Verify Files') {
+      steps {
+        dir('terraform-infra/environment/dev') {
+          sh 'ls -la'
+        }
+      }
+    }
+
     stage('Init') {
       steps {
-        dir('environment/dev') {
+        dir('terraform-infra/environment/dev') {
           sh 'terraform init'
         }
       }
@@ -24,7 +32,7 @@ pipeline {
 
     stage('Plan') {
       steps {
-        dir('environment/dev') {
+        dir('terraform-infra/environment/dev') {
           sh 'terraform plan -out=tfplan'
         }
       }
@@ -32,7 +40,7 @@ pipeline {
 
     stage('Apply') {
       steps {
-        dir('environment/dev') {
+        dir('terraform-infra/environment/dev') {
           input message: 'Approve apply?', ok: 'Apply'
           sh 'terraform apply tfplan'
         }
