@@ -15,5 +15,8 @@ module "eks" {
   subnet_ids       = var.subnet_ids
   cluster_role_arn = module.iam.cluster_role_arn
   node_role_arn    = module.iam.node_role_arn
+  assume_role_policy   = var.assume_role_policy     
+  role_name            = var.role_name       
+  node_role_name       = var.node_role_name 
 }
 
