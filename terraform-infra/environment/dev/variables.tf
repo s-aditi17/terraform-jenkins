@@ -23,3 +23,9 @@ variable "assume_role_policy" {
   type        = string
 }
 
+variable "region" {
+  description = "AWS region to deploy resources"
+  type        = string
+  default     = "us-east-1" 
+}
+
