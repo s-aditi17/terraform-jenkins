@@ -16,7 +16,7 @@ pipeline {
 
     stage('Init') {
       steps {
-        dir('environments/dev') {
+        dir('environment/dev') {
           sh 'terraform init'
         }
       }
@@ -24,7 +24,7 @@ pipeline {
 
     stage('Plan') {
       steps {
-        dir('environments/dev') {
+        dir('environment/dev') {
           sh 'terraform plan -out=tfplan'
         }
       }
@@ -32,7 +32,7 @@ pipeline {
 
     stage('Apply') {
       steps {
-        dir('environments/dev') {
+        dir('environment/dev') {
           input message: 'Approve apply?', ok: 'Apply'
           sh 'terraform apply tfplan'
         }
