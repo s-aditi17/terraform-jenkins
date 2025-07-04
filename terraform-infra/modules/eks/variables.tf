@@ -5,4 +5,14 @@ variable "subnet_ids" {
 }
 variable "cluster_role_arn" {}
 variable "node_role_arn" {}
+variable "role_name" {
+  description = "IAM Role name for the EKS control plane"
+  type        = string
+}
+
+variable "node_role_name" {
+  description = "IAM Role name for the EKS node group"
+  type        = string
+}
+
 
