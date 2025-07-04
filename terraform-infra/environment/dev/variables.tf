@@ -28,4 +28,8 @@ variable "region" {
   type        = string
   default     = "us-east-1" 
 }
+variable "node_role_name" {
+  description = "IAM Role name for the EKS node group"
+  type        = string
+}
 
