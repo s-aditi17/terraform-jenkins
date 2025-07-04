@@ -12,3 +12,14 @@ variable "subnet_ids" {
   description = "List of subnet IDs for EKS cluster"
   type        = list(string)
 }
+
+variable "role_name" {
+  description = "Name of the IAM role"
+  type        = string
+}
+
+variable "assume_role_policy" {
+  description = "IAM assume role policy JSON"
+  type        = string
+}
+
