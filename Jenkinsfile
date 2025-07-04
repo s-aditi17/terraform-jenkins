@@ -41,8 +41,7 @@ pipeline {
     stage('Apply') {
       steps {
         dir('terraform-infra/environment/dev') {
-          input message: 'Approve apply?', ok: 'Apply'
-          sh 'terraform apply tfplan'
+          terraform apply -auto-approve
         }
       }
     }
