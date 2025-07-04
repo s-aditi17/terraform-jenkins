@@ -5,3 +5,4 @@ subnet_ids = [
   "subnet-0827fef02ba6493c8",
 "subnet-0f5de8d4d65db06f0",
 "subnet-0d28fdddb4c94222a"
+]
