@@ -4,6 +4,8 @@ provider "aws" {
 
 module "iam" {
   source = "../../modules/iam"
+  role_name           = var.role_name
+  assume_role_policy  = var.assume_role_policy
 }
 
 module "eks" {
