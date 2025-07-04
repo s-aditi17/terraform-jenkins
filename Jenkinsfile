@@ -41,7 +41,7 @@ pipeline {
     stage('Apply') {
       steps {
         dir('terraform-infra/environment/dev') {
-          terraform apply -auto-approve
+          sh 'terraform apply -auto-approve'
         }
       }
     }
