@@ -1,5 +1,6 @@
 cluster_name = "dev-eks-cluster"
 k8s_version  = "1.29"
+region       = "us-east-1"
 
 subnet_ids = [
   "subnet-0827fef02ba6493c8",
