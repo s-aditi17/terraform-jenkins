@@ -32,9 +32,6 @@ variable "node_role_name" {
   description = "IAM Role name for the EKS node group"
   type        = string
 }
-variable "aws_region" {
-  description = "AWS region to deploy resources in"
-  type        = string
-}
+
 
 
