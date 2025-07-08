@@ -23,6 +23,14 @@ resource "aws_iam_role_policy_attachment" "eks_node_AmazonEKS_CNI_Policy" {
   role       = var.node_role_name
 }
 
+module "eks" {
+  source = "../../modules/eks"
+
+  cluster_name = var.cluster_name
+  ...
+}
+
+
 resource "aws_eks_cluster" "eks" {
   name     = var.cluster_name
   role_arn = var.cluster_role_arn
